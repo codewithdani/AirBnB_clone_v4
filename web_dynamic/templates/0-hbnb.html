@@ -2,11 +2,9 @@
 <html lang="en">
   <head>
     <!-- HEAD -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Holberton AirBnB</title>
-
     <!-- CSS stayles -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/4-common.css') + '?' + cache_id }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/3-header.css') + '?' + cache_id }}">
@@ -14,7 +12,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/6-filters.css') + '?' + cache_id }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/8-places.css') + '?' + cache_id }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/font-awesome.css') + '?' + cache_id }}">
-
     <!-- FAVICON -->
     <link rel="icon" href="{{ url_for('static', filename='images/icon.png') + '?' + cache_id }}" />
     
@@ -27,13 +24,9 @@
 
     <main>
       <div class="container">
-
 	<!-- FILTERS -->
-
 	<section class="filters">
-
 	  <!-- LOCATIONS -->
-
 	  <div class="locations">
 	    <h3>States</h3>
 	    <h4>&nbsp;</h4>
@@ -48,9 +41,7 @@
 	      {% endfor %}
 	    </ul>
 	  </div>
-
 	  <!-- Amenities -->
-
 	  <div class="amenities">
 	    <h3>Amenities</h3>
 	    <h4>&nbsp;</h4>
@@ -60,17 +51,13 @@
 	      {% endfor %}
 	    </ul>
 	  </div>
-
 	  <!-- SEARCH BUTTON -->
-
 	  <button>Search</button>
 	</section>
 
 	<section class="places">
 	  <h1>Places</h1>
-
 	<!-- PLACE -->
-
 	  {% for place in places|sort(attribute='name') %}
 
 	  <article>
@@ -110,9 +97,7 @@
 
 	      </div>
 	    </div>
-
 	    <!-- USER -->
-	    
 
 	    <div class="user">
 
@@ -132,9 +117,7 @@
 	</section>
       </div>
     </main>
-
     <!-- FOOTER -->
-
     <footer>
       Holberton School
     </footer>
