@@ -18,7 +18,7 @@ $('document').ready(function () {
     success: appendPlaces
   });
 
-  let states = {};
+  const states = {};
   $('.locations > UL > H2 > INPUT[type="checkbox"]').change(function () {
     if ($(this).is(':checked')) {
       states[$(this).attr('data-id')] = $(this).attr('data-name');
@@ -33,7 +33,7 @@ $('document').ready(function () {
     }
   });
 
-  let cities = {};
+  const cities = {};
   $('.locations > UL > UL > LI INPUT[type="checkbox"]').change(function () {
     if ($(this).is(':checked')) {
       cities[$(this).attr('data-id')] = $(this).attr('data-name');
@@ -48,7 +48,7 @@ $('document').ready(function () {
     }
   });
 
-  let amenities = {};
+  const amenities = {};
   $('.amenities INPUT[type="checkbox"]').change(function () {
     if ($(this).is(':checked')) {
       amenities[$(this).attr('data-id')] = $(this).attr('data-name');
@@ -67,9 +67,9 @@ $('document').ready(function () {
       url: api + ':5001/api/v1/places_search/',
       type: 'POST',
       data: JSON.stringify({
-        'states': Object.keys(states),
-        'cities': Object.keys(cities),
-        'amenities': Object.keys(amenities)
+        states: Object.keys(states),
+        cities: Object.keys(cities),
+        amenities: Object.keys(amenities)
       }),
       contentType: 'application/json',
       dataType: 'json',
