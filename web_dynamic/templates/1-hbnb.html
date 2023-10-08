@@ -2,14 +2,11 @@
 <HTML lang="en">
   <HEAD>
     <!-- HEAD -->
-
     <META charset="utf-8">
     <META name="viewport" content="width=device-width">
     <TITLE>HolbertonBnB</TITLE>
-
     <!-- Favicon -->
     <LINK rel="shortcut icon" href="{{ url_for('static', filename='images/icon.png') + '?' + cache_id }}">
-
     <!-- CSS styles -->
     <LINK rel="stylesheet" href="{{ url_for('static', filename='styles/4-common.css') + '?' + cache_id }}">
     <LINK rel="stylesheet" href="{{ url_for('static', filename='styles/3-header.css') + '?' + cache_id }}">
@@ -17,28 +14,20 @@
     <LINK rel="stylesheet" href="{{ url_for('static', filename='styles/6-filters.css') + '?' + cache_id }}">
     <LINK rel="stylesheet" href="{{ url_for('static', filename='styles/8-places.css') + '?' + cache_id }}">
     <LINK rel="stylesheet" href="{{ url_for('static', filename='styles/font-awesome.css') + '?' + cache_id }}">
-
     <!-- jQUERY -->
     <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
     <SCRIPT src="{{ url_for('static', filename='scripts/1-hbnb.js') + '?' + cache_id }}"></SCRIPT>
   </HEAD>
-
   <!-- BODY -->
   <BODY>
-
     <!-- Header -->
-
     <HEADER>
     </HEADER>
     <MAIN>
       <DIV class="container">
-
 	<!-- FILTERS -->
-
 	<SECTION class="filters">
-
 	  <!-- LOCATIONS -->
-
 	  <DIV class="locations">
 	    <H3>States</H3>
 	    <H4>&nbsp;</H4>
@@ -53,9 +42,7 @@
 	      {% endfor %}
 	    </UL>
 	  </DIV>
-
 	  <!--Amenities -->
-
 	  <DIV class="amenities">
 	    <H3>Amenities</H3>
 	    <H4>&nbsp;</H4>
@@ -69,17 +56,13 @@
 	      {% endfor %}
 	    </UL>
 	  </DIV>
-
 	  <!--Search  Button -->
-
 	  <BUTTON>Search</BUTTON>
 	</SECTION>
 
 	<SECTION class="places">
 	  <H1>Places</H1>
-
 	<!-- PLACE -->
-
 	  {% for place in places|sort(attribute='name') %}
 
 	  <ARTICLE>
@@ -119,9 +102,7 @@
 
 	      </DIV>
 	    </DIV>
-
 	    <!-- User -->
-
 	    <DIV class="user">
 
 	      <STRONG>Owner: {{ users[place.user_id] }}</STRONG>
@@ -140,9 +121,7 @@
 	</SECTION>
       </DIV>
     </MAIN>
-
     <!-- FOOTER -->
-
     <FOOTER>
       Holberton School
     </FOOTER>
